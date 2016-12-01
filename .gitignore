@@ -7,16 +7,16 @@
 *.o
 *.sdb
 *.obj.dmp
-html/
-nbproject/private/
-nbproject/Package-*.bash
-build/
-nbbuild/
-dist/
-nbdist/
-nbactions.xml
-nb-configuration.xml
-funclist
-nbproject/Makefile-*
-disassembly/
-*.map
+5. MPLAB/html/
+5. MPLAB/nbproject/private/
+5. MPLAB/nbproject/Package-*.bash
+5. MPLAB/build/
+5. MPLAB/nbbuild/
+5. MPLAB/dist/
+5. MPLAB/nbdist/
+5. MPLAB/nbactions.xml
+5. MPLAB/nb-configuration.xml
+5. MPLAB/funclist
+5. MPLAB/nbproject/Makefile-*
+5. MPLAB/disassembly/
+5. MPLAB/*.map
