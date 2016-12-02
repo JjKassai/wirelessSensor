@@ -6,6 +6,7 @@
                    projectFiles="true">
       <itemPath>source/fuseConfiguration.h</itemPath>
       <itemPath>source/peripheralConfiguration.h</itemPath>
+      <itemPath>source/interrupts.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

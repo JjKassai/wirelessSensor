@@ -9,12 +9,14 @@ void configureUART(void);
 
 void configureClock(void)
 {
-    OSCCONbits.IRCF = 0b1111;
+    OSCCONbits.IRCF = 0b1101;          // Configure the internal clock for 4 MHz HF
 }
 
 void configureGPIO(void)
 {
-    
+    APFCONbits.RXDTSEL = 0;            // UART RX on RC5 (default)
+    APFCONbits.SDOSEL = 0;             // SDO function on RC2 (default)
+    APFCONbits.TXCKSEL = 0;            // UART TX on RC4 (default)
 }
 
 void configureI2C(void)
@@ -24,6 +26,16 @@ void configureI2C(void)
 
 void configureUART(void)
 {
+    // Transmit status and control
+    TXSTAbits.TXEN = 1;           // Enable transmitter
+    TXSTAbits.BRGH = 1;           // High speed baud rate selection
+    
+    // Receive status and control
+    RCSTAbits.SPEN = 1;           // Configure TX/RX pins for serial port use
+    RCSTAbits.CREN = 1;           // Enable receiver
+    
+    // Baud rate control
+    BAUDCONbits.BRG16 = 0;        // Use the regular 8 bit baud generation
     
 }
 
