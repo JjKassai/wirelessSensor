@@ -35,8 +35,19 @@ void configureUART(void)
     RCSTAbits.CREN = 1;           // Enable receiver
     
     // Baud rate control
-    BAUDCONbits.BRG16 = 0;        // Use the regular 8 bit baud generation
-    
+    BAUDCONbits.BRG16 = 1;        // Use 16-bit baud generation
+    SPBRGL = 0x8;                 // Per table, SPBRG = 8 for 115.2k @ 4MHz Fosc
+    SPBRGH = 0b0;
+}
+
+void putch(unsigned char byte)
+{
+    TXREG = byte;
+    while(!TXIF)
+    {
+        // Wait for the transmit buffer to empty
+    }
+    TXIF = 0;
 }
 
 #endif	/* PERIPHERALCONFIGURATION_H */

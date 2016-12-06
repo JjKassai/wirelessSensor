@@ -2,6 +2,7 @@
 #include "fuseConfiguration.h"
 
 #include <xc.h>
+#include <stdio.h>
 #include "interrupts.h"
 #include "peripheralConfiguration.h"
 
@@ -13,6 +14,8 @@ void main(void)
     configureGPIO();
     configureUART();
     configureI2C();
+    
+    printf("Test");
     
     while(1)
     {
