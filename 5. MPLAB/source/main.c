@@ -3,6 +3,9 @@
 
 #include <xc.h>
 #include <stdio.h>
+#include <stdint.h>
+#include "esp8266.h"
+#include "hdc1080.h"
 #include "interrupts.h"
 #include "peripheralConfiguration.h"
 

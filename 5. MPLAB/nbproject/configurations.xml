@@ -7,6 +7,8 @@
       <itemPath>source/fuseConfiguration.h</itemPath>
       <itemPath>source/peripheralConfiguration.h</itemPath>
       <itemPath>source/interrupts.h</itemPath>
+      <itemPath>source/hdc1080.h</itemPath>
+      <itemPath>source/esp8266.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -16,6 +18,10 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>source/main.c</itemPath>
+      <itemPath>source/peripheralConfiguration.c</itemPath>
+      <itemPath>source/interrupts.c</itemPath>
+      <itemPath>source/hdc1080.c</itemPath>
+      <itemPath>source/esp8266.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
