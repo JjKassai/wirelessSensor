@@ -18,8 +18,9 @@ void main(void)
     configureUART();
     configureI2C();
     
-    printf("Test");
+    while (!RCIF);       // Wait for activity on the UART lines to initialize
     
+        
     while(1)
     {
         // This space intentionally left blank
