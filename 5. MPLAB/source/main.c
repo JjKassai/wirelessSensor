@@ -4,6 +4,7 @@
 #include <xc.h>
 #include <stdio.h>
 #include <stdint.h>
+#include "diagnostics.h"
 #include "esp8266.h"
 #include "hdc1080.h"
 #include "interrupts.h"
@@ -17,13 +18,11 @@ void main(void)
     configureGPIO();
     configureUART();
     configureI2C();
-    
-    while (!RCIF);       // Wait for activity on the UART lines to initialize
-    
         
     while(1)
     {
-        // This space intentionally left blank
+        testHDC1080();
+        __delay_ms(3000);
     }
     return;
 }

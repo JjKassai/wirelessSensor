@@ -6,9 +6,9 @@
 #include <stdint.h>
 
 
-// Defines related to this component
-#define HDC1080_I2C_ADDRESS         0b1000000
-
+// Constants and Defines related to this component
+const uint8_t writeAddress = 0x80;
+const uint8_t readAddress  = 0x81;    
 
 // Types related to this component
 typedef struct {

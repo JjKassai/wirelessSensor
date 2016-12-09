@@ -2,7 +2,8 @@
 
 uint8_t testCommunication(void)
 {
-    printf(ATTENTION_CMD)
+    printf("AT");
+    printf(STATIC_CONST_END_CMD);
 }
 uint8_t reset(void)
 {

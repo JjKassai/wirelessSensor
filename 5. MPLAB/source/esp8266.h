@@ -3,10 +3,9 @@
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 #include <stdint.h>
+#include <stdio.h>
 
 // Defines and Types for this module
-#define ATTENTION_CMD "AT"
-
 typedef struct {
     char reset[];
     char info[];
@@ -21,17 +20,19 @@ typedef struct {
 
 
 // Constants and Variables for this module
+static const char STATIC_CONST_ATTENTION_CMD[] = "AT+";
+static const char STATIC_CONST_END_CMD[]       = "\r\n";
 static const esp8266ATCommands_t esp8266ATCommands = 
 {
-    "+RST",
-    "+GMR",
-    "+GSLP",
-    "+RESTORE",
-    "+SLEEP",
-    "+WAKEUPGPIO",
-    "+CWMODE_CUR",
-    "+CWLAP",
-    "+CWJAP"
+    "RST",
+    "GMR",
+    "GSLP",
+    "RESTORE",
+    "SLEEP",
+    "WAKEUPGPIO",
+    "CWMODE_CUR",
+    "CWLAP",
+    "CWJAP"
 };
 
 
