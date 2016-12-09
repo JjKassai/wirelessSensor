@@ -11,7 +11,7 @@ void testUART(void)
 }
 
 void testHDC1080(void)
-{ 
+{
     while(!RCIF);
     RCIF = 0;
     printf("Issuing start condition\r\n");

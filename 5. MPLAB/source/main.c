@@ -7,6 +7,7 @@
 #include "diagnostics.h"
 #include "esp8266.h"
 #include "hdc1080.h"
+#include "i2c.h"
 #include "interrupts.h"
 #include "peripheralConfiguration.h"
 
