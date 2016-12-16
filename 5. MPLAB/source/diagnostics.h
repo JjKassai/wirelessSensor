@@ -14,7 +14,6 @@ uint8_t temp;
 
 // Function prototypes
 void testUART(void);
-void testHDC1080(void);
 
 #endif	/* DIAGNOSTICS_H */
 

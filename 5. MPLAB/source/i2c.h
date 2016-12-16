@@ -13,6 +13,7 @@ uint8_t i2cReceive(uint8_t ackFlag);
 
 // Public functions
 uint16_t i2cReadValue16(uint8_t deviceAddress, uint8_t registerValue);
+uint32_t i2cReadValue32(uint8_t deviceAddress, uint8_t registerValue);
 
 
 #endif	/* I2C_H */

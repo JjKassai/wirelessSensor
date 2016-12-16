@@ -9,8 +9,8 @@ void configureClock(void)
 
 void configureGPIO(void)
 {
-    APFCONbits.RXDTSEL = 0;            // UART RX on RC5 (default)
-    APFCONbits.TXCKSEL = 0;            // UART TX on RC4 (default)
+    APFCON0bits.RXDTSEL = 0;            // UART RX on RC5 (default)
+    APFCON0bits.TXCKSEL = 0;            // UART TX on RC4 (default)
 }
 
 void configureI2C(void)

@@ -6,11 +6,10 @@
                    projectFiles="true">
       <itemPath>source/fuseConfiguration.h</itemPath>
       <itemPath>source/peripheralConfiguration.h</itemPath>
-      <itemPath>source/interrupts.h</itemPath>
       <itemPath>source/hdc1080.h</itemPath>
       <itemPath>source/esp8266.h</itemPath>
-      <itemPath>source/diagnostics.h</itemPath>
       <itemPath>source/i2c.h</itemPath>
+      <itemPath>source/diagnostics.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -24,8 +23,8 @@
       <itemPath>source/interrupts.c</itemPath>
       <itemPath>source/hdc1080.c</itemPath>
       <itemPath>source/esp8266.c</itemPath>
-      <itemPath>source/diagnostics.c</itemPath>
       <itemPath>source/i2c.c</itemPath>
+      <itemPath>source/diagnostics.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -33,12 +32,15 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>source</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC16LF1823</targetDevice>
+        <targetDevice>PIC16LF1825</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PICkit3PlatformTool</platformTool>
@@ -58,8 +60,6 @@
           <parseOnProdLoad>false</parseOnProdLoad>
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
-        <subordinates>
-        </subordinates>
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
@@ -142,7 +142,6 @@
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
@@ -165,7 +164,7 @@
         <property key="memories.programmemory.partition2.start"
                   value="${memories.programmemory.partition2.start.value}"/>
         <property key="memories.programmemory.start" value="0x0"/>
-        <property key="poweroptions.powerenable" value="true"/>
+        <property key="poweroptions.powerenable" value="false"/>
         <property key="programmertogo.imagename" value=""/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>

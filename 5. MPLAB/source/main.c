@@ -4,15 +4,19 @@
 #include <xc.h>
 #include <stdio.h>
 #include <stdint.h>
-#include "diagnostics.h"
 #include "esp8266.h"
 #include "hdc1080.h"
 #include "i2c.h"
-#include "interrupts.h"
 #include "peripheralConfiguration.h"
 
 void main(void) 
 {
+    float temperature;
+    float humidity;
+    
+    uint16_t tempInt;
+    uint16_t humiInt;
+    
     // Initialize peripherals
     configureClock();
     configureInterrupts();
@@ -22,8 +26,7 @@ void main(void)
         
     while(1)
     {
-        testHDC1080();
-        __delay_ms(3000);
+        hdc1080ReadTemperature();
     }
     return;
 }

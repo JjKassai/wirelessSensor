@@ -2,16 +2,18 @@
 #define	HDC1080_H
 
 
+#define RECIP_2TOTHE16 0.000015259
+
+
 // Includes used in this module
 #include <stdint.h>
 
 
 // Constants and Defines related to this component
-const uint8_t writeAddress = 0x80;
-const uint8_t readAddress  = 0x81;    
 
 // Types related to this component
 typedef struct {
+    uint8_t i2cAddress;
     uint8_t temperature;
     uint8_t humidity;
     uint8_t configuration;
@@ -32,17 +34,14 @@ typedef enum {
 
 
 // Variables and constants related to this component
-const HDC1080Registers_t HDC1080Registers = {0x00, 0x01, 0x02, 0x0FB, 0xFC, 0xFD, 0xFE, 0xFF};
+const HDC1080Registers_t HDC1080Registers = {0x40, 0x00, 0x01, 0x02, 0x0FB, 0xFC, 0xFD, 0xFE, 0xFF};
 i2cStates_t currentI2CState = IDLE;
 i2cStates_t nextI2CState = START;
 
 // Function prototypes related to this component
-uint16_t readTemperature(void);
-uint16_t readHumidity(void);
+float hdc1080ReadTemperature(void);
+float hdc1080ReadHumidity(void);
 uint16_t readDeviceID(void);
 uint16_t readSerialID(void);
-uint16_t readMfgID(void);
-uint16_t writeConfiguration(uint16_t configurationValue);
-
 
 #endif	/* HDC1080_H */

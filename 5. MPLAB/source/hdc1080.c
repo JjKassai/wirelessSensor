@@ -2,17 +2,22 @@
 #include "i2c.h"
 
 // Function definitions related to this component
-uint16_t readTemperature(void)
+float hdc1080ReadTemperature(void)
 {
-    static uint16_t result;
-    result = 0;
+    static float result;
+    result = (float)i2cReadValue16(HDC1080Registers.i2cAddress, HDC1080Registers.temperature);
+    result *= RECIP_2TOTHE16;
+    result *= 165;
+    result -= 40;
     return result;
 }
 
-uint16_t readHumidity(void)
+float hdc1080ReadHumidity(void)
 {
-    static uint16_t result;
-    result = 0;
+    static float result;
+    result = (float)i2cReadValue16(HDC1080Registers.i2cAddress, HDC1080Registers.humidity);
+    result *= RECIP_2TOTHE16;
+    result *= 100;
     return result;
 }
 
