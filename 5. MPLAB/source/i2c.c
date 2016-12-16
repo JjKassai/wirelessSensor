@@ -41,12 +41,12 @@ uint8_t i2cReceive(uint8_t ackFlag)
     return SSP1BUF;
 }
 
-uint16_t i2cReadValue16(uint8_t deviceAddress, uint8_t registerValue)
+uint16_t i2cReadValue16(uint8_t deviceAddress, uint8_t registerAddress)
 {    
     static uint16_t returnValue;
     i2cInitiateStartCondition();             // Start condition
     i2cTransmit(deviceAddress << 1);         // Transmit address + write
-    i2cTransmit(registerValue);              // Transmit register pointer
+    i2cTransmit(registerAddress);            // Transmit register pointer
     
     i2cInitiateRestartCondition();           // Restart condition
     
@@ -61,12 +61,12 @@ uint16_t i2cReadValue16(uint8_t deviceAddress, uint8_t registerValue)
     return returnValue;
 }
 
-uint32_t i2cReadValue32(uint8_t deviceAddress, uint8_t registerValue)
+uint32_t i2cReadValue32(uint8_t deviceAddress, uint8_t registerAddress)
 {
     static uint32_t returnValue;
     i2cInitiateStartCondition();             // Start condition
     i2cTransmit(deviceAddress << 1);         // Transmit address + write
-    i2cTransmit(registerValue);              // Transmit register pointer
+    i2cTransmit(registerAddress);            // Transmit register pointer
     
     i2cInitiateRestartCondition();           // Restart condition
     
@@ -82,4 +82,14 @@ uint32_t i2cReadValue32(uint8_t deviceAddress, uint8_t registerValue)
     i2cInitiateStopCondition();
     
     return returnValue;
+}
+
+void i2cWriteValue16(uint8_t deviceAddress, uint8_t registerAddress, uint8_t registerValueUpper, uint8_t registerValueLower)
+{    
+    i2cInitiateStartCondition();             // Start condition
+    i2cTransmit(deviceAddress << 1);         // Transmit address + write
+    i2cTransmit(registerAddress);            // Transmit register pointer
+    i2cTransmit(registerValueUpper);         // Transmit first half of register value
+    i2cTransmit(registerValueLower);         // Transmit second half of register value
+    i2cInitiateStopCondition();              // End the transaction
 }

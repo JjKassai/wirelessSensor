@@ -16,12 +16,17 @@ void main(void)
     int8_t tempInt;
     int8_t humiInt;
     
+    uint16_t *hdc1080SerialNumber;
+    
     // Initialize peripherals
     configureClock();
     configureInterrupts();
     configureGPIO();
     configureUART();
     configureI2C();
+    
+    hdc1080WriteConfiguration(0xFFFF);
+    hdc1080SerialNumber = hdc1080ReadSerialID();
         
     while(1)
     {
@@ -29,6 +34,7 @@ void main(void)
         humidity = hdc1080ReadHumidity();
         tempInt = (int8_t)temperature;
         humiInt = (int8_t)humidity;
+        // Add ESP8266 Web Server Code Here
     }
     return;
 }

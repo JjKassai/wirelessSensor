@@ -21,29 +21,37 @@ float hdc1080ReadHumidity(void)
     return result;
 }
 
-uint16_t readDeviceID(void)
+uint16_t hdc1080ReadDeviceID(void)
 {
     static uint16_t result;
-    result = 0;
+    result = i2cReadValue16(HDC1080Registers.i2cAddress, HDC1080Registers.devID);
     return result;
 }
 
-uint16_t readSerialID(void)
+uint16_t *hdc1080ReadSerialID(void)
 {
-    static uint16_t result;
-    result = 0;
+    static uint16_t result[3];
+    result[0] = i2cReadValue16(HDC1080Registers.i2cAddress, HDC1080Registers.serialID1);
+    result[1] = i2cReadValue16(HDC1080Registers.i2cAddress, HDC1080Registers.serialID2);
+    result[2] = i2cReadValue16(HDC1080Registers.i2cAddress, HDC1080Registers.serialID3);
     return result;
 }
-uint16_t readMfgID(void)
+uint16_t hdc1080ReadMfgID(void)
 {
     static uint16_t result;
-    result = 0;
+    result = i2cReadValue16(HDC1080Registers.i2cAddress, HDC1080Registers.mfgID);
     return result;
 }
 
-uint16_t writeConfiguration(uint16_t configurationValue)
+uint16_t hdc1080WriteConfiguration(uint16_t configurationValue)
 {
     static uint16_t result;
-    result = 0;
+    static uint8_t config[2];
+    
+    config[0] = (uint8_t)(configurationValue >> 8);                             // Split up the word into two bytes
+    config[1] = (uint8_t)(configurationValue && 0xFF);
+    
+    i2cWriteValue16(HDC1080Registers.i2cAddress, HDC1080Registers.configuration, config[0], config[1]);
+    result = i2cReadValue16(HDC1080Registers.i2cAddress, HDC1080Registers.configuration);
     return result;
 }

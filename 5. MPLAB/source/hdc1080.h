@@ -41,8 +41,9 @@ i2cStates_t nextI2CState = START;
 // Function prototypes related to this component
 float hdc1080ReadTemperature(void);
 float hdc1080ReadHumidity(void);
-uint16_t readDeviceID(void);
-uint16_t readSerialID(void);
-uint16_t readMfgID(void);
+uint16_t hdc1080ReadDeviceID(void);
+uint16_t *hdc1080ReadSerialID(void);
+uint16_t hdc1080ReadMfgID(void);
+uint16_t hdc1080WriteConfiguration(uint16_t configurationValue);
 
 #endif	/* HDC1080_H */
