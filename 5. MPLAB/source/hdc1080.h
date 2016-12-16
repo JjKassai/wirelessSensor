@@ -43,5 +43,6 @@ float hdc1080ReadTemperature(void);
 float hdc1080ReadHumidity(void);
 uint16_t readDeviceID(void);
 uint16_t readSerialID(void);
+uint16_t readMfgID(void);
 
 #endif	/* HDC1080_H */

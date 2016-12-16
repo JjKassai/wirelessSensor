@@ -6,7 +6,6 @@
 #include <stdint.h>
 #include "esp8266.h"
 #include "hdc1080.h"
-#include "i2c.h"
 #include "peripheralConfiguration.h"
 
 void main(void) 
@@ -14,8 +13,8 @@ void main(void)
     float temperature;
     float humidity;
     
-    uint16_t tempInt;
-    uint16_t humiInt;
+    int8_t tempInt;
+    int8_t humiInt;
     
     // Initialize peripherals
     configureClock();
@@ -26,7 +25,10 @@ void main(void)
         
     while(1)
     {
-        hdc1080ReadTemperature();
+        temperature = hdc1080ReadTemperature();
+        humidity = hdc1080ReadHumidity();
+        tempInt = (int8_t)temperature;
+        humiInt = (int8_t)humidity;
     }
     return;
 }
