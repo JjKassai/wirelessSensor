@@ -6968,7 +6968,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="DAT" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="CLK" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="X1" library="con-molex" deviceset="22-23-2021" device=""/>
-<part name="C1" library="rcl" deviceset="C-US" device="C0603" value="0.1u"/>
+<part name="C1" library="rcl" deviceset="C-US" device="C0603" value="2.2u"/>
 <part name="+3.1" library="supply1" deviceset="VCC" device="">
 <attribute name="VOLTAGE" value="3.3"/>
 </part>
@@ -6985,10 +6985,18 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <part name="TX" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="4.7k"/>
 <part name="R2" library="rcl" deviceset="R-US_" device="R0603" value="4.7k"/>
+<part name="C3" library="rcl" deviceset="C-US" device="C0603K" value="22u"/>
+<part name="C4" library="rcl" deviceset="C-US" device="C0603K" value=".1u"/>
+<part name="C5" library="rcl" deviceset="C-US" device="C0603K" value=".1u"/>
+<part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
+<part name="SUPPLY6" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="-96.52" y="17.78" size="1.778" layer="97">I removed pin 3 from Vdd 
+(not sure why it was there, 
+must have been a mistake)</text>
 </plain>
 <instances>
 <instance part="U1" gate="A" x="0" y="27.94"/>
@@ -6996,7 +7004,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="SUPPLY1" gate="GND" x="68.58" y="-20.32"/>
 <instance part="SUPPLY2" gate="GND" x="17.78" y="12.7"/>
 <instance part="VPP" gate="G$1" x="-71.12" y="10.16"/>
-<instance part="VDD" gate="G$1" x="-76.2" y="10.16"/>
+<instance part="VDD" gate="G$1" x="-88.9" y="10.16"/>
 <instance part="VSS" gate="G$1" x="68.58" y="10.16"/>
 <instance part="DAT" gate="G$1" x="81.28" y="10.16"/>
 <instance part="CLK" gate="G$1" x="86.36" y="10.16"/>
@@ -7019,6 +7027,11 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <instance part="TX" gate="G$1" x="-66.04" y="-17.78"/>
 <instance part="R1" gate="G$1" x="38.1" y="43.18" rot="R90"/>
 <instance part="R2" gate="G$1" x="45.72" y="43.18" rot="R90"/>
+<instance part="C3" gate="G$1" x="17.78" y="-50.8"/>
+<instance part="C4" gate="G$1" x="25.4" y="-50.8"/>
+<instance part="C5" gate="G$1" x="-88.9" y="-2.54"/>
+<instance part="SUPPLY5" gate="GND" x="25.4" y="-63.5"/>
+<instance part="SUPPLY6" gate="GND" x="-88.9" y="-10.16"/>
 </instances>
 <busses>
 </busses>
@@ -7041,14 +7054,10 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="U1" gate="A" pin="VDD"/>
 <wire x1="-63.5" y1="33.02" x2="-22.86" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="33.02" x2="-17.78" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="2.54" x2="-76.2" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="2.54" x2="-88.9" y2="2.54" width="0.1524" layer="91"/>
 <junction x="-63.5" y="2.54"/>
 <pinref part="VDD" gate="G$1" pin="TP"/>
-<wire x1="-76.2" y1="2.54" x2="-76.2" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="U2" gate="A" pin="T1G/SDO/CLKR/T1OSO/CLKOUT/OSC2/CPS3/AN3/RA4"/>
-<wire x1="-63.5" y1="-2.54" x2="-76.2" y2="-2.54" width="0.1524" layer="91"/>
-<wire x1="-76.2" y1="-2.54" x2="-76.2" y2="2.54" width="0.1524" layer="91"/>
-<junction x="-76.2" y="2.54"/>
+<wire x1="-88.9" y1="2.54" x2="-88.9" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="-22.86" y1="33.02" x2="-22.86" y2="30.48" width="0.1524" layer="91"/>
 <junction x="-22.86" y="33.02"/>
@@ -7056,12 +7065,22 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <junction x="-63.5" y="33.02"/>
 <wire x1="-63.5" y1="48.26" x2="38.1" y2="48.26" width="0.1524" layer="91"/>
 <junction x="38.1" y="48.26"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="-88.9" y1="2.54" x2="-88.9" y2="0" width="0.1524" layer="91"/>
+<junction x="-88.9" y="2.54"/>
 </segment>
 <segment>
 <pinref part="ESP8266" gate="A" pin="8"/>
 <pinref part="+3.2" gate="VCC" pin="VCC"/>
-<wire x1="5.08" y1="-45.72" x2="25.4" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="-45.72" x2="17.78" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="-45.72" x2="25.4" y2="-45.72" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="-45.72" x2="25.4" y2="-38.1" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="25.4" y1="-45.72" x2="25.4" y2="-48.26" width="0.1524" layer="91"/>
+<junction x="25.4" y="-45.72"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="17.78" y1="-48.26" x2="17.78" y2="-45.72" width="0.1524" layer="91"/>
+<junction x="17.78" y="-45.72"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -7101,6 +7120,20 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
 <pinref part="ESP8266" gate="A" pin="1"/>
 <wire x1="-22.86" y1="-38.1" x2="-2.54" y2="-38.1" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C3" gate="G$1" pin="2"/>
+<wire x1="17.78" y1="-55.88" x2="17.78" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="-58.42" x2="25.4" y2="-58.42" width="0.1524" layer="91"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="25.4" y1="-58.42" x2="25.4" y2="-55.88" width="0.1524" layer="91"/>
+<pinref part="SUPPLY5" gate="GND" pin="GND"/>
+<wire x1="25.4" y1="-58.42" x2="25.4" y2="-60.96" width="0.1524" layer="91"/>
+<junction x="25.4" y="-58.42"/>
+</segment>
+<segment>
+<pinref part="C5" gate="G$1" pin="2"/>
+<pinref part="SUPPLY6" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -7215,4 +7248,10 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
