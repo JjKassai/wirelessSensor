@@ -47,7 +47,7 @@ uint8_t wakeupGPIO(void);
 uint8_t wifiChangeMode(uint8_t newMode);
 uint8_t scanSSIDs(void);
 uint8_t connect(char SSID[], char password[]);
-
+void esp8266StartServer(uint16_t port);
 
 #endif	/* ESP8266_H */
 

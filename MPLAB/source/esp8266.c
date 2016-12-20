@@ -1,4 +1,14 @@
 #include "esp8266.h"
+#include "peripheralConfiguration.h"
+
+void esp8266StartServer(uint16_t port)
+{
+    printf("AT+CWMODE=1\r\n");
+    __delay_ms(2000);
+    printf("AT+CIPMUX=1\r\n");
+    __delay_ms(2000);
+    printf("AT+CIPSERVER=1,%u\r\n", port);
+}
 
 uint8_t testCommunication(void)
 {
