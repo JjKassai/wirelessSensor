@@ -4,6 +4,7 @@
 #include <xc.h>
 #include <stdio.h>
 #include <stdint.h>
+#include <string.h>
 #include "esp8266.h"
 #include "globalVariables.h"
 #include "hdc1080.h"
@@ -11,7 +12,7 @@
 #include "peripheralConfiguration.h"
 
 
-#define UPDATE_PERIOD 1000
+#define RESPONSE_BUFFER_SIZE 25
 
 
 void updateOutputs(void);
@@ -34,15 +35,12 @@ void main(void)
     
     while(1)
     {
-        updateOutputs();
-        while(1)
+        if(receivedCharacter[0] == ',' && receivedCharacter[1] == 'D' && receivedCharacter[2] == 'P' && receivedCharacter[3] == 'I')
         {
-            if(receivedCharacter == ',' && previousCharacter == 'D')
-            {
-                __delay_ms(1000);
-                serveClient(0);
-                __delay_ms(500);
-            }
+            updateOutputs();
+            __delay_ms(500);
+            serveClient(0);
+            __delay_ms(500);
         }
     }
     return;
@@ -54,12 +52,14 @@ void updateOutputs(void)
     humidity = hdc1080ReadHumidity();
     tempInt = (int8_t)temperature;
     humiInt = (uint8_t)humidity;
-    __delay_ms(UPDATE_PERIOD);
 }
 
 void serveClient(uint8_t linkID)
 {
-    printf("AT+CIPSEND=%u,15\r\n", linkID);
+    static char response[RESPONSE_BUFFER_SIZE] = "This is a test\r\n";
+    static uint8_t responseLength;
+    responseLength = strlen(response);
+    printf("AT+CIPSEND=%u,%u\r\n", linkID, responseLength);
     __delay_ms(50);
     printf("This is a test.", linkID);
     __delay_ms(50);

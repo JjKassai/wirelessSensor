@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8386,6 +8386,109 @@ Source: www.kingbright.com</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="jumper">
+<description>&lt;b&gt;Jumpers&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="SJ">
+<description>&lt;b&gt;Solder jumper&lt;/b&gt;</description>
+<wire x1="1.397" y1="-1.016" x2="-1.397" y2="-1.016" width="0.1524" layer="21"/>
+<wire x1="1.397" y1="1.016" x2="1.651" y2="0.762" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.651" y1="0.762" x2="-1.397" y2="1.016" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-1.651" y1="-0.762" x2="-1.397" y2="-1.016" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.397" y1="-1.016" x2="1.651" y2="-0.762" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.651" y1="-0.762" x2="1.651" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-1.651" y1="-0.762" x2="-1.651" y2="0.762" width="0.1524" layer="21"/>
+<wire x1="-1.397" y1="1.016" x2="1.397" y2="1.016" width="0.1524" layer="21"/>
+<wire x1="1.016" y1="0" x2="1.524" y2="0" width="0.1524" layer="51"/>
+<wire x1="-1.016" y1="0" x2="-1.524" y2="0" width="0.1524" layer="51"/>
+<wire x1="-0.254" y1="-0.127" x2="-0.254" y2="0.127" width="1.27" layer="51" curve="-180" cap="flat"/>
+<wire x1="0.254" y1="0.127" x2="0.254" y2="-0.127" width="1.27" layer="51" curve="-180" cap="flat"/>
+<smd name="1" x="-0.762" y="0" dx="1.1684" dy="1.6002" layer="1"/>
+<smd name="2" x="0.762" y="0" dx="1.1684" dy="1.6002" layer="1"/>
+<text x="-1.651" y="1.143" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0.4001" y="0" size="0.02" layer="27">&gt;VALUE</text>
+<rectangle x1="-0.0762" y1="-0.9144" x2="0.0762" y2="0.9144" layer="29"/>
+</package>
+<package name="SJW">
+<description>&lt;b&gt;Solder jumper&lt;/b&gt;</description>
+<wire x1="1.905" y1="-1.524" x2="-1.905" y2="-1.524" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="1.524" x2="2.159" y2="1.27" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-2.159" y1="1.27" x2="-1.905" y2="1.524" width="0.1524" layer="21" curve="-90"/>
+<wire x1="-2.159" y1="-1.27" x2="-1.905" y2="-1.524" width="0.1524" layer="21" curve="90"/>
+<wire x1="1.905" y1="-1.524" x2="2.159" y2="-1.27" width="0.1524" layer="21" curve="90"/>
+<wire x1="2.159" y1="-1.27" x2="2.159" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-2.159" y1="-1.27" x2="-2.159" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.524" x2="1.905" y2="1.524" width="0.1524" layer="21"/>
+<wire x1="0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.1524" layer="51"/>
+<wire x1="-0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.1524" layer="51"/>
+<wire x1="1.524" y1="0" x2="2.032" y2="0" width="0.1524" layer="51"/>
+<wire x1="-1.524" y1="0" x2="-2.032" y2="0" width="0.1524" layer="51"/>
+<wire x1="0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.1524" layer="51" curve="-180"/>
+<wire x1="-0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.1524" layer="51" curve="180"/>
+<smd name="1" x="-1.27" y="0" dx="1.27" dy="2.54" layer="1"/>
+<smd name="2" x="1.27" y="0" dx="1.27" dy="2.54" layer="1"/>
+<text x="-2.159" y="1.778" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="1" y="0" size="0.02" layer="27">&gt;VALUE</text>
+<rectangle x1="0.762" y1="-0.762" x2="1.016" y2="0.762" layer="51"/>
+<rectangle x1="1.016" y1="-0.635" x2="1.27" y2="0.635" layer="51"/>
+<rectangle x1="1.27" y1="-0.508" x2="1.397" y2="0.508" layer="51"/>
+<rectangle x1="1.397" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
+<rectangle x1="-1.016" y1="-0.762" x2="-0.762" y2="0.762" layer="51"/>
+<rectangle x1="-1.27" y1="-0.635" x2="-1.016" y2="0.635" layer="51"/>
+<rectangle x1="-1.397" y1="-0.508" x2="-1.27" y2="0.508" layer="51"/>
+<rectangle x1="-1.524" y1="-0.254" x2="-1.397" y2="0.254" layer="51"/>
+<rectangle x1="0.9652" y1="-0.7112" x2="1.0922" y2="-0.5842" layer="51"/>
+<rectangle x1="1.3462" y1="-0.3556" x2="1.4732" y2="-0.2286" layer="51"/>
+<rectangle x1="1.3462" y1="0.2032" x2="1.4732" y2="0.3302" layer="51"/>
+<rectangle x1="0.9652" y1="0.5842" x2="1.0922" y2="0.7112" layer="51"/>
+<rectangle x1="-1.0922" y1="-0.7112" x2="-0.9652" y2="-0.5842" layer="51"/>
+<rectangle x1="-1.4478" y1="-0.3302" x2="-1.3208" y2="-0.2032" layer="51"/>
+<rectangle x1="-1.4732" y1="0.2032" x2="-1.3462" y2="0.3302" layer="51"/>
+<rectangle x1="-1.1176" y1="0.5842" x2="-0.9906" y2="0.7112" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="SJ">
+<wire x1="0.381" y1="0.635" x2="0.381" y2="-0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
+<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
+<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="5.08" y="0" visible="pad" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="1" x="-5.08" y="0" visible="pad" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SJ" prefix="SJ" uservalue="yes">
+<description>SMD solder &lt;b&gt;JUMPER&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="SJ" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SJ">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="W" package="SJW">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8401,7 +8504,7 @@ Source: www.kingbright.com</description>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="VPP" library="testpad" deviceset="TP" device="B1,27"/>
-<part name="VDD" library="testpad" deviceset="TP" device="B1,27"/>
+<part name="VCC" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="VSS" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="DAT" library="testpad" deviceset="TP" device="B1,27"/>
 <part name="CLK" library="testpad" deviceset="TP" device="B1,27"/>
@@ -8434,13 +8537,18 @@ Source: www.kingbright.com</description>
 <part name="+3.2" library="supply1" deviceset="VCC" device="">
 <attribute name="VOLTAGE" value="3.3"/>
 </part>
+<part name="R5" library="rcl" deviceset="R-US_" device="R0603" value="SEL"/>
+<part name="R6" library="rcl" deviceset="R-US_" device="R0603" value="SEL"/>
+<part name="SJ1" library="jumper" deviceset="SJ" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="-96.52" y="15.24" size="1.27" layer="97">I removed pin 3 from Vdd 
+<text x="-149.86" y="40.64" size="1.27" layer="97">I removed pin 3 from Vdd 
 (not sure why it was there, 
-must have been a mistake)</text>
+must have been a mistake).
+
+This must have been for battery reading.</text>
 <text x="-12.7" y="40.64" size="1.27" layer="97">HDC1080 NC can be floating or GND</text>
 </plain>
 <instances>
@@ -8449,7 +8557,7 @@ must have been a mistake)</text>
 <instance part="SUPPLY1" gate="GND" x="68.58" y="-25.4"/>
 <instance part="SUPPLY2" gate="GND" x="17.78" y="12.7"/>
 <instance part="VPP" gate="G$1" x="-71.12" y="10.16"/>
-<instance part="VDD" gate="G$1" x="-88.9" y="10.16"/>
+<instance part="VCC" gate="G$1" x="-101.6" y="10.16"/>
 <instance part="VSS" gate="G$1" x="68.58" y="10.16"/>
 <instance part="DAT" gate="G$1" x="81.28" y="10.16"/>
 <instance part="CLK" gate="G$1" x="86.36" y="10.16"/>
@@ -8469,8 +8577,8 @@ must have been a mistake)</text>
 <instance part="R2" gate="G$1" x="45.72" y="43.18" rot="R90"/>
 <instance part="C3" gate="G$1" x="38.1" y="-81.28"/>
 <instance part="C4" gate="G$1" x="30.48" y="-81.28"/>
-<instance part="C5" gate="G$1" x="-88.9" y="-2.54"/>
-<instance part="SUPPLY6" gate="GND" x="-88.9" y="-10.16"/>
+<instance part="C5" gate="G$1" x="-101.6" y="-12.7"/>
+<instance part="SUPPLY6" gate="GND" x="-101.6" y="-30.48"/>
 <instance part="LED1" gate="G$1" x="88.9" y="-7.62"/>
 <instance part="R3" gate="G$1" x="88.9" y="-17.78" rot="R90"/>
 <instance part="U$1" gate="G$1" x="50.8" y="-88.9"/>
@@ -8483,6 +8591,9 @@ must have been a mistake)</text>
 <instance part="+3.2" gate="VCC" x="30.48" y="-40.64">
 <attribute name="VOLTAGE" x="30.48" y="-40.64" size="1.778" layer="96"/>
 </instance>
+<instance part="R5" gate="G$1" x="-93.98" y="-5.08" rot="R90"/>
+<instance part="R6" gate="G$1" x="-93.98" y="-20.32" rot="R90"/>
+<instance part="SJ1" gate="1" x="-81.28" y="-30.48" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -8505,10 +8616,11 @@ must have been a mistake)</text>
 <pinref part="U1" gate="A" pin="VDD"/>
 <wire x1="-63.5" y1="33.02" x2="-22.86" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="33.02" x2="-17.78" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="-63.5" y1="2.54" x2="-88.9" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-63.5" y1="2.54" x2="-93.98" y2="2.54" width="0.1524" layer="91"/>
 <junction x="-63.5" y="2.54"/>
-<pinref part="VDD" gate="G$1" pin="TP"/>
-<wire x1="-88.9" y1="2.54" x2="-88.9" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="VCC" gate="G$1" pin="TP"/>
+<wire x1="-93.98" y1="2.54" x2="-101.6" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="2.54" x2="-101.6" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="-22.86" y1="33.02" x2="-22.86" y2="30.48" width="0.1524" layer="91"/>
 <junction x="-22.86" y="33.02"/>
@@ -8517,8 +8629,11 @@ must have been a mistake)</text>
 <wire x1="-63.5" y1="48.26" x2="38.1" y2="48.26" width="0.1524" layer="91"/>
 <junction x="38.1" y="48.26"/>
 <pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="-88.9" y1="2.54" x2="-88.9" y2="0" width="0.1524" layer="91"/>
-<junction x="-88.9" y="2.54"/>
+<wire x1="-101.6" y1="2.54" x2="-101.6" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="-101.6" y="2.54"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="-93.98" y1="0" x2="-93.98" y2="2.54" width="0.1524" layer="91"/>
+<junction x="-93.98" y="2.54"/>
 </segment>
 <segment>
 <pinref part="+3.3" gate="VCC" pin="VCC"/>
@@ -8577,6 +8692,11 @@ must have been a mistake)</text>
 <segment>
 <pinref part="C5" gate="G$1" pin="2"/>
 <pinref part="SUPPLY6" gate="GND" pin="GND"/>
+<wire x1="-101.6" y1="-27.94" x2="-101.6" y2="-25.4" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="-101.6" y1="-25.4" x2="-101.6" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-101.6" y1="-25.4" x2="-93.98" y2="-25.4" width="0.1524" layer="91"/>
+<junction x="-101.6" y="-25.4"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND"/>
@@ -8703,6 +8823,32 @@ must have been a mistake)</text>
 <pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="U$1" gate="G$1" pin="EN"/>
 <wire x1="40.64" y1="-48.26" x2="45.72" y2="-48.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="R6" gate="G$1" pin="2"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="-93.98" y1="-15.24" x2="-93.98" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="-12.7" x2="-93.98" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-93.98" y1="-12.7" x2="-88.9" y2="-12.7" width="0.1524" layer="91"/>
+<junction x="-93.98" y="-12.7"/>
+<wire x1="-88.9" y1="-12.7" x2="-88.9" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="U2" gate="A" pin="T1G/SDO/CLKR/T1OSO/CLKOUT/OSC2/CPS3/AN3/RA4"/>
+<wire x1="-88.9" y1="-2.54" x2="-63.5" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="SJ1" gate="1" pin="2"/>
+<wire x1="-88.9" y1="-12.7" x2="-88.9" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="-88.9" y1="-30.48" x2="-86.36" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="-88.9" y="-12.7"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="SJ1" gate="1" pin="1"/>
+<wire x1="-76.2" y1="-30.48" x2="38.1" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="-30.48" x2="38.1" y2="-43.18" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="ADC"/>
+<wire x1="38.1" y1="-43.18" x2="45.72" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

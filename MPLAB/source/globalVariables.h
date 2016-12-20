@@ -11,8 +11,7 @@ uint8_t humiInt;
 
 uint8_t diagCount = 0;
 
-volatile char receivedCharacter;
-volatile char previousCharacter;
+volatile char receivedCharacter[4];
 
 volatile char interruptUpdateFlag;
 

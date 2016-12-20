@@ -6,8 +6,10 @@ void interrupt interruptHandler(void)
 {
     if(PIR1bits.RCIF)
     {
-        previousCharacter = receivedCharacter;
-        receivedCharacter = RCREG;
+        receivedCharacter[3] = receivedCharacter[2];
+        receivedCharacter[2] = receivedCharacter[1];
+        receivedCharacter[1] = receivedCharacter[0];
+        receivedCharacter[0] = RCREG;
         PIR1bits.RCIF = 0;
     }
 }
