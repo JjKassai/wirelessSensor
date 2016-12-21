@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1169,6 +1169,44 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <text x="-2.54" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-2.54" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+<package name="87438-12">
+<description>&lt;b&gt;Wire-to-Board  1.50mm (.059") Pitch Header - Right Angle, SMT, Shrouded&lt;/b&gt;&lt;p&gt;
+Source: http://www.molex.com/product/micro/87438.html</description>
+<wire x1="-4.8" y1="8.25" x2="-4.05" y2="8.25" width="0.2032" layer="21"/>
+<wire x1="-4.05" y1="8.25" x2="-4.05" y2="9.55" width="0.2032" layer="21"/>
+<wire x1="-4.05" y1="9.55" x2="0.75" y2="9.55" width="0.2032" layer="21"/>
+<wire x1="0.75" y1="9.55" x2="0.75" y2="-9.55" width="0.2032" layer="51"/>
+<wire x1="0.75" y1="-9.55" x2="-4.05" y2="-9.55" width="0.2032" layer="21"/>
+<wire x1="-4.05" y1="-9.55" x2="-4.05" y2="-8.25" width="0.2032" layer="21"/>
+<wire x1="-4.05" y1="-8.25" x2="-4.8" y2="-8.25" width="0.2032" layer="21"/>
+<wire x1="-4.8" y1="-8.25" x2="-4.8" y2="8.25" width="0.2032" layer="21"/>
+<smd name="1" x="0" y="8.25" dx="7" dy="0.85" layer="1"/>
+<smd name="2" x="0" y="6.75" dx="7" dy="0.85" layer="1"/>
+<smd name="3" x="0" y="5.25" dx="7" dy="0.85" layer="1"/>
+<smd name="4" x="0" y="3.75" dx="7" dy="0.85" layer="1"/>
+<smd name="5" x="0" y="2.25" dx="7" dy="0.85" layer="1"/>
+<smd name="6" x="0" y="0.75" dx="7" dy="0.85" layer="1"/>
+<smd name="7" x="0" y="-0.75" dx="7" dy="0.85" layer="1"/>
+<smd name="8" x="0" y="-2.25" dx="7" dy="0.85" layer="1"/>
+<smd name="9" x="0" y="-3.75" dx="7" dy="0.85" layer="1"/>
+<smd name="10" x="0" y="-5.25" dx="7" dy="0.85" layer="1"/>
+<smd name="11" x="0" y="-6.75" dx="7" dy="0.85" layer="1"/>
+<smd name="12" x="0" y="-8.25" dx="7" dy="0.85" layer="1"/>
+<text x="-3.75" y="10.5" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.75" y="-11.25" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="0.8" y1="8.025" x2="2.85" y2="8.475" layer="51"/>
+<rectangle x1="0.8" y1="6.525" x2="2.85" y2="6.975" layer="51"/>
+<rectangle x1="0.8" y1="5.025" x2="2.85" y2="5.475" layer="51"/>
+<rectangle x1="0.8" y1="3.525" x2="2.85" y2="3.975" layer="51"/>
+<rectangle x1="0.8" y1="2.025" x2="2.85" y2="2.475" layer="51"/>
+<rectangle x1="0.8" y1="0.525" x2="2.85" y2="0.975" layer="51"/>
+<rectangle x1="0.8" y1="-0.975" x2="2.85" y2="-0.525" layer="51"/>
+<rectangle x1="0.8" y1="-2.475" x2="2.85" y2="-2.025" layer="51"/>
+<rectangle x1="0.8" y1="-3.975" x2="2.85" y2="-3.525" layer="51"/>
+<rectangle x1="0.8" y1="-5.475" x2="2.85" y2="-5.025" layer="51"/>
+<rectangle x1="0.8" y1="-6.975" x2="2.85" y2="-6.525" layer="51"/>
+<rectangle x1="0.8" y1="-8.475" x2="2.85" y2="-8.025" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="MV">
@@ -1202,6 +1240,50 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <attribute name="MPN" value="22-23-2021" constant="no"/>
 <attribute name="OC_FARNELL" value="1462926" constant="no"/>
 <attribute name="OC_NEWARK" value="25C3832" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="87438-12" prefix="X">
+<description>&lt;b&gt;Wire-to-Board  1.50mm (.059") Pitch Header - Right Angle, SMT, Shrouded&lt;/b&gt;&lt;p&gt;
+Source: http://www.molex.com/product/micro/87438.html</description>
+<gates>
+<gate name="-1" symbol="MV" x="0" y="12.7" addlevel="always" swaplevel="1"/>
+<gate name="-2" symbol="M" x="0" y="10.16" addlevel="always" swaplevel="1"/>
+<gate name="-3" symbol="M" x="0" y="7.62" addlevel="always" swaplevel="1"/>
+<gate name="-4" symbol="M" x="0" y="5.08" addlevel="always" swaplevel="1"/>
+<gate name="-5" symbol="M" x="0" y="2.54" addlevel="always" swaplevel="1"/>
+<gate name="-6" symbol="M" x="0" y="0" addlevel="always" swaplevel="1"/>
+<gate name="-7" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
+<gate name="-8" symbol="M" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
+<gate name="-9" symbol="M" x="0" y="-7.62" addlevel="always" swaplevel="1"/>
+<gate name="-10" symbol="M" x="0" y="-10.16" addlevel="always" swaplevel="1"/>
+<gate name="-11" symbol="M" x="0" y="-12.7" addlevel="always" swaplevel="1"/>
+<gate name="-12" symbol="M" x="0" y="-15.24" addlevel="always" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="87438-12">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-10" pin="S" pad="10"/>
+<connect gate="-11" pin="S" pad="11"/>
+<connect gate="-12" pin="S" pad="12"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-3" pin="S" pad="3"/>
+<connect gate="-4" pin="S" pad="4"/>
+<connect gate="-5" pin="S" pad="5"/>
+<connect gate="-6" pin="S" pad="6"/>
+<connect gate="-7" pin="S" pad="7"/>
+<connect gate="-8" pin="S" pad="8"/>
+<connect gate="-9" pin="S" pad="9"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="1711334" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -8386,109 +8468,6 @@ Source: www.kingbright.com</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="jumper">
-<description>&lt;b&gt;Jumpers&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="SJ">
-<description>&lt;b&gt;Solder jumper&lt;/b&gt;</description>
-<wire x1="1.397" y1="-1.016" x2="-1.397" y2="-1.016" width="0.1524" layer="21"/>
-<wire x1="1.397" y1="1.016" x2="1.651" y2="0.762" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-1.651" y1="0.762" x2="-1.397" y2="1.016" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-1.651" y1="-0.762" x2="-1.397" y2="-1.016" width="0.1524" layer="21" curve="90"/>
-<wire x1="1.397" y1="-1.016" x2="1.651" y2="-0.762" width="0.1524" layer="21" curve="90"/>
-<wire x1="1.651" y1="-0.762" x2="1.651" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-1.651" y1="-0.762" x2="-1.651" y2="0.762" width="0.1524" layer="21"/>
-<wire x1="-1.397" y1="1.016" x2="1.397" y2="1.016" width="0.1524" layer="21"/>
-<wire x1="1.016" y1="0" x2="1.524" y2="0" width="0.1524" layer="51"/>
-<wire x1="-1.016" y1="0" x2="-1.524" y2="0" width="0.1524" layer="51"/>
-<wire x1="-0.254" y1="-0.127" x2="-0.254" y2="0.127" width="1.27" layer="51" curve="-180" cap="flat"/>
-<wire x1="0.254" y1="0.127" x2="0.254" y2="-0.127" width="1.27" layer="51" curve="-180" cap="flat"/>
-<smd name="1" x="-0.762" y="0" dx="1.1684" dy="1.6002" layer="1"/>
-<smd name="2" x="0.762" y="0" dx="1.1684" dy="1.6002" layer="1"/>
-<text x="-1.651" y="1.143" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="0.4001" y="0" size="0.02" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.0762" y1="-0.9144" x2="0.0762" y2="0.9144" layer="29"/>
-</package>
-<package name="SJW">
-<description>&lt;b&gt;Solder jumper&lt;/b&gt;</description>
-<wire x1="1.905" y1="-1.524" x2="-1.905" y2="-1.524" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="1.524" x2="2.159" y2="1.27" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-2.159" y1="1.27" x2="-1.905" y2="1.524" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-2.159" y1="-1.27" x2="-1.905" y2="-1.524" width="0.1524" layer="21" curve="90"/>
-<wire x1="1.905" y1="-1.524" x2="2.159" y2="-1.27" width="0.1524" layer="21" curve="90"/>
-<wire x1="2.159" y1="-1.27" x2="2.159" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-2.159" y1="-1.27" x2="-2.159" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="1.524" x2="1.905" y2="1.524" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.1524" layer="51"/>
-<wire x1="-0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.1524" layer="51"/>
-<wire x1="1.524" y1="0" x2="2.032" y2="0" width="0.1524" layer="51"/>
-<wire x1="-1.524" y1="0" x2="-2.032" y2="0" width="0.1524" layer="51"/>
-<wire x1="0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.1524" layer="51" curve="-180"/>
-<wire x1="-0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.1524" layer="51" curve="180"/>
-<smd name="1" x="-1.27" y="0" dx="1.27" dy="2.54" layer="1"/>
-<smd name="2" x="1.27" y="0" dx="1.27" dy="2.54" layer="1"/>
-<text x="-2.159" y="1.778" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="1" y="0" size="0.02" layer="27">&gt;VALUE</text>
-<rectangle x1="0.762" y1="-0.762" x2="1.016" y2="0.762" layer="51"/>
-<rectangle x1="1.016" y1="-0.635" x2="1.27" y2="0.635" layer="51"/>
-<rectangle x1="1.27" y1="-0.508" x2="1.397" y2="0.508" layer="51"/>
-<rectangle x1="1.397" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
-<rectangle x1="-1.016" y1="-0.762" x2="-0.762" y2="0.762" layer="51"/>
-<rectangle x1="-1.27" y1="-0.635" x2="-1.016" y2="0.635" layer="51"/>
-<rectangle x1="-1.397" y1="-0.508" x2="-1.27" y2="0.508" layer="51"/>
-<rectangle x1="-1.524" y1="-0.254" x2="-1.397" y2="0.254" layer="51"/>
-<rectangle x1="0.9652" y1="-0.7112" x2="1.0922" y2="-0.5842" layer="51"/>
-<rectangle x1="1.3462" y1="-0.3556" x2="1.4732" y2="-0.2286" layer="51"/>
-<rectangle x1="1.3462" y1="0.2032" x2="1.4732" y2="0.3302" layer="51"/>
-<rectangle x1="0.9652" y1="0.5842" x2="1.0922" y2="0.7112" layer="51"/>
-<rectangle x1="-1.0922" y1="-0.7112" x2="-0.9652" y2="-0.5842" layer="51"/>
-<rectangle x1="-1.4478" y1="-0.3302" x2="-1.3208" y2="-0.2032" layer="51"/>
-<rectangle x1="-1.4732" y1="0.2032" x2="-1.3462" y2="0.3302" layer="51"/>
-<rectangle x1="-1.1176" y1="0.5842" x2="-0.9906" y2="0.7112" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="SJ">
-<wire x1="0.381" y1="0.635" x2="0.381" y2="-0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
-<wire x1="-0.381" y1="-0.635" x2="-0.381" y2="0.635" width="1.27" layer="94" curve="-180" cap="flat"/>
-<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
-<text x="-2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.54" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="2" x="5.08" y="0" visible="pad" length="short" direction="pas" swaplevel="1" rot="R180"/>
-<pin name="1" x="-5.08" y="0" visible="pad" length="short" direction="pas" swaplevel="1"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="SJ" prefix="SJ" uservalue="yes">
-<description>SMD solder &lt;b&gt;JUMPER&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="SJ" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SJ">
-<connects>
-<connect gate="1" pin="1" pad="1"/>
-<connect gate="1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="W" package="SJW">
-<connects>
-<connect gate="1" pin="1" pad="1"/>
-<connect gate="1" pin="2" pad="2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8539,17 +8518,18 @@ Source: www.kingbright.com</description>
 </part>
 <part name="R5" library="rcl" deviceset="R-US_" device="R0603" value="SEL"/>
 <part name="R6" library="rcl" deviceset="R-US_" device="R0603" value="SEL"/>
-<part name="SJ1" library="jumper" deviceset="SJ" device=""/>
+<part name="X2" library="con-molex" deviceset="87438-12" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="-149.86" y="40.64" size="1.27" layer="97">I removed pin 3 from Vdd 
+<text x="-93.98" y="20.32" size="1.27" layer="97">I removed pin 3 from Vdd 
 (not sure why it was there, 
 must have been a mistake).
 
 This must have been for battery reading.</text>
 <text x="-12.7" y="40.64" size="1.27" layer="97">HDC1080 NC can be floating or GND</text>
+<text x="73.66" y="45.72" size="1.778" layer="97">RP Protection?</text>
 </plain>
 <instances>
 <instance part="U1" gate="A" x="0" y="27.94"/>
@@ -8593,7 +8573,18 @@ This must have been for battery reading.</text>
 </instance>
 <instance part="R5" gate="G$1" x="-93.98" y="-5.08" rot="R90"/>
 <instance part="R6" gate="G$1" x="-93.98" y="-20.32" rot="R90"/>
-<instance part="SJ1" gate="1" x="-81.28" y="-30.48" rot="R180"/>
+<instance part="X2" gate="-1" x="-55.88" y="-43.18"/>
+<instance part="X2" gate="-2" x="-55.88" y="-45.72"/>
+<instance part="X2" gate="-3" x="-55.88" y="-48.26"/>
+<instance part="X2" gate="-4" x="-55.88" y="-50.8"/>
+<instance part="X2" gate="-5" x="-55.88" y="-53.34"/>
+<instance part="X2" gate="-6" x="-55.88" y="-55.88"/>
+<instance part="X2" gate="-7" x="-55.88" y="-58.42"/>
+<instance part="X2" gate="-8" x="-55.88" y="-60.96"/>
+<instance part="X2" gate="-9" x="-55.88" y="-63.5"/>
+<instance part="X2" gate="-10" x="-55.88" y="-66.04"/>
+<instance part="X2" gate="-11" x="-55.88" y="-68.58"/>
+<instance part="X2" gate="-12" x="-55.88" y="-71.12"/>
 </instances>
 <busses>
 </busses>
@@ -8836,19 +8827,6 @@ This must have been for battery reading.</text>
 <wire x1="-88.9" y1="-12.7" x2="-88.9" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="U2" gate="A" pin="T1G/SDO/CLKR/T1OSO/CLKOUT/OSC2/CPS3/AN3/RA4"/>
 <wire x1="-88.9" y1="-2.54" x2="-63.5" y2="-2.54" width="0.1524" layer="91"/>
-<pinref part="SJ1" gate="1" pin="2"/>
-<wire x1="-88.9" y1="-12.7" x2="-88.9" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="-88.9" y1="-30.48" x2="-86.36" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="-88.9" y="-12.7"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="SJ1" gate="1" pin="1"/>
-<wire x1="-76.2" y1="-30.48" x2="38.1" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="-30.48" x2="38.1" y2="-43.18" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="ADC"/>
-<wire x1="38.1" y1="-43.18" x2="45.72" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
