@@ -55,3 +55,10 @@ uint16_t hdc1080WriteConfiguration(uint16_t configurationValue)
     result = i2cReadValue16(HDC1080Registers.i2cAddress, HDC1080Registers.configuration);
     return result;
 }
+
+uint16_t hdc1080ReadConfiguration(void)
+{
+    static uint16_t result;
+    result = i2cReadValue16(HDC1080Registers.i2cAddress, HDC1080Registers.configuration);
+    return result;
+}

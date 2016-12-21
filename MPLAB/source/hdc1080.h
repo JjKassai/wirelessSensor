@@ -45,5 +45,6 @@ uint16_t hdc1080ReadDeviceID(void);
 uint16_t *hdc1080ReadSerialID(void);
 uint16_t hdc1080ReadMfgID(void);
 uint16_t hdc1080WriteConfiguration(uint16_t configurationValue);
+uint16_t hdc1080ReadConfiguration(void);
 
 #endif	/* HDC1080_H */
